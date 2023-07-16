@@ -8,7 +8,7 @@ fun main() {
     println(notificationText)
 
     var numberOfWorkers: UInt = 2000u
-    println(numberOfWorkers)
+//    println(numberOfWorkers)
     numberOfWorkers = 1999u
     println(numberOfWorkers)
 
