@@ -2,7 +2,7 @@ package lesson2
 
 fun main() {
 
-    val averageScore = (3f + 4f + 3f + 5f) / 4f
+    val averageScore = (3.0 + 4.0 + 3.0 + 5.0) / 4.0
     println(averageScore)
 
 }
