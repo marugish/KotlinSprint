@@ -9,11 +9,10 @@ fun correctTimeFormat(value: Int):String {
 
 fun main() {
 
-    var seconds = 6480
-    val hours = seconds / 3600
-    seconds %= 3600
-    val minutes = seconds / 60
-    seconds %= 60
+    val flightTime = 6480
+    val hours = flightTime / 3600
+    val minutes = (flightTime % 3600) / 60
+    val seconds = flightTime % 60
     // version 1
     println(String.format("%02d:%02d:%02d", hours, minutes, seconds))
     // version 2
