@@ -1,14 +1,5 @@
 package lesson2
 
-fun correctTimeFormat(value:Int):String {
-
-    var str = ""
-    if (value in 0 .. 9) str += "0"
-    str += value.toString()
-    return str
-
-}
-
 fun main() {
 
     val checkoutHour = 9
@@ -23,9 +14,6 @@ fun main() {
     }
     if (arrivalHour >= 24) arrivalHour -= 24
 
-    // version 1
     println(String.format("%02d:%02d", arrivalHour, arrivalMinute))
-    // version 2
-    println("${correctTimeFormat(arrivalHour)}:${correctTimeFormat(arrivalMinute)}")
 
 }
