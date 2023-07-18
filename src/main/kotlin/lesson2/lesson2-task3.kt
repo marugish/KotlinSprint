@@ -6,13 +6,17 @@ fun main() {
     val checkoutMinute = 39
     val travelTimeInMinute = 457
 
-    var arrivalHour = checkoutHour + (travelTimeInMinute / 60)
-    var arrivalMinute = checkoutMinute + (travelTimeInMinute % 60)
-    if (arrivalMinute >= 60) {
-        arrivalHour += 1
-        arrivalMinute -= 60
-    }
-    if (arrivalHour >= 24) arrivalHour -= 24
+    val minutesInHourConst = 60
+    val hoursInDayConst = 24
+
+    // Переводим 9:39 в минуты от начала дня
+    var minutesFromDayStart = checkoutHour * minutesInHourConst + checkoutMinute
+    // Прибавляем время в пути
+    minutesFromDayStart += travelTimeInMinute
+    // Переводим обратно в часы:минуты
+    var arrivalHour = minutesFromDayStart / minutesInHourConst
+    val arrivalMinute = minutesFromDayStart % minutesInHourConst
+    if (arrivalHour >= hoursInDayConst) arrivalHour %= hoursInDayConst
 
     println(String.format("%02d:%02d", arrivalHour, arrivalMinute))
 
