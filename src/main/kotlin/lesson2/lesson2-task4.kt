@@ -4,7 +4,10 @@ fun main() {
 
     val crystalOre = 7
     val ironOre = 11
-    println("Crystal ore buff: ${crystalOre / 5}")
-    println("Iron ore buff: ${ironOre / 5}")
+    val buffInPercents = 20
+    val percentsInWhole = 100
+
+    println("Crystal ore buff: ${crystalOre * buffInPercents / percentsInWhole}")
+    println("Iron ore buff: ${ironOre * buffInPercents / percentsInWhole}")
 
 }
