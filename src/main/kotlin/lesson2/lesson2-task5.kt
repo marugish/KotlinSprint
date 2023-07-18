@@ -1,7 +1,6 @@
 package lesson2
 
 import kotlin.math.pow
-import kotlin.math.roundToInt
 
 fun main() {
 
@@ -13,8 +12,8 @@ fun main() {
 
     val intermediateResults = 1 + (interestRate / numberPeriodsInYear)
     val finalAmount = initialAmount * intermediateResults.pow(numberPeriodsInYear * termPerYears)
-    val roundedFinalAmount = (finalAmount * 1000.0).roundToInt() / 1000.0   // 3 decimal places
 
-    println(roundedFinalAmount)
+    println("%.3f".format(finalAmount))
+
 
 }
