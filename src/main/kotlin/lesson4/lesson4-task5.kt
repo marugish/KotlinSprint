@@ -14,7 +14,7 @@ fun main() {
     val crew = readln().toInt()
     print("Введите количество ящиков на борту: ")
     val foodBoxes = readln().toInt()
-    print("Погода благоприятна? ")
+    print("Погода благоприятная? ")
     val favorableWeather = readln().toBoolean()
 
     val result = (foodBoxes > MIN_FOOD_BOXES) &&
