@@ -4,8 +4,8 @@ import kotlin.random.Random
 
 fun main() {
 
-    val winningNumber1 = Random.nextInt(1, 5)
-    val winningNumber2 = Random.nextInt(1, 5)
+    val winningNumber1 = Random.nextInt(1, 100)
+    val winningNumber2 = Random.nextInt(1, 100)
 
     print("$winningNumber1, $winningNumber2")
     print("Введите первое число: ")
