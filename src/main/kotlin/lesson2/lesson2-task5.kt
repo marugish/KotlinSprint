@@ -15,5 +15,4 @@ fun main() {
 
     println("%.3f".format(finalAmount))
 
-
 }
