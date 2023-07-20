@@ -9,17 +9,19 @@ fun main() {
     print("Введите второе число: ")
     val number2 = readln().toInt()
 
-    if (number1 == NUMBER_1 && number2 == NUMBER_2)
-    {
-        println("Поздравляем! Вы выиграли главный приз!")
+    var numberOfGuessed = 0
+    when (number1) {
+        NUMBER_1 -> numberOfGuessed++
+        NUMBER_2 -> numberOfGuessed++
     }
-    else if (number1 == NUMBER_1 || number2 == NUMBER_2)
-    {
-        println("Вы выиграли утешительный приз!")
+    when (number2) {
+        NUMBER_1 -> numberOfGuessed++
+        NUMBER_2 -> numberOfGuessed++
     }
-    else
-    {
-        println("Неудача! Крутите барабан!")
+    when (numberOfGuessed) {
+        2 -> println("Поздравляем! Вы выиграли главный приз!")
+        1 -> println("Вы выиграли утешительный приз!")
+        else -> println("Неудача! Крутите барабан!")
     }
     println("Числа необходимые для победы: $NUMBER_1 и $NUMBER_2.")
 
