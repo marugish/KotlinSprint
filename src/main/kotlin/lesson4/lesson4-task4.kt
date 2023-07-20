@@ -8,25 +8,15 @@ const val PRESS_EXERCISE = true
 fun main() {
 
     val trainingDay = 5
-    if ((trainingDay % 2) == 0)
-    {
-        val multiString = """
-            Упражнения для рук:    ${!HAND_EXERCISE}
-            Упражнения для ног:    ${!LEG_EXERCISE}
-            Упражнения для спины:  ${!BACK_EXERCISE}
-            Упражнения для пресса: ${!PRESS_EXERCISE}
-        """.trimIndent()
-        println(multiString)
-    }
-    else
-    {
-        val multiString = """
-            Упражнения для рук:    ${HAND_EXERCISE}
-            Упражнения для ног:    ${LEG_EXERCISE}
-            Упражнения для спины:  ${BACK_EXERCISE}
-            Упражнения для пресса: ${PRESS_EXERCISE}
-        """.trimIndent()
-        println(multiString)
-    }
+    val flag = ((trainingDay % 2) == 0)
+
+    val multiString = """
+        Упражнения для рук:    ${(flag && !HAND_EXERCISE) || (!flag && HAND_EXERCISE)}
+        Упражнения для ног:    ${(flag && !LEG_EXERCISE) || (!flag && LEG_EXERCISE)}
+        Упражнения для спины:  ${(flag && !BACK_EXERCISE) || (!flag && BACK_EXERCISE)}
+        Упражнения для пресса: ${(flag && !PRESS_EXERCISE) || (!flag && PRESS_EXERCISE)}
+    """.trimIndent()
+
+    println(multiString)
 
 }
